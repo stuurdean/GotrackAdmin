@@ -90,8 +90,27 @@ public class SignIn extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 progressDialog.dismiss();
 
-                // startActivity(new Intent(ParentSignIn.this,ParentDashboard.class));
-                finish();
+                if(authResult.getUser().isEmailVerified())
+                {
+                    startActivity(new Intent(SignIn.this,Dashboard.class));
+                    finish();
+                }
+                else {
+
+                    builder.setTitle("ERROR").setIcon(R.drawable.ic_baseline_error_24)
+                            .setMessage("You are not verified as Administrator")
+                            .setCancelable(false)
+
+                            .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    // User cancelled the dialog
+                                    auth.signOut();
+                                    
+                                    dialog.cancel();
+                                }
+                            }).show();
+                }
+
 
             }
         }).addOnFailureListener(new OnFailureListener() {
