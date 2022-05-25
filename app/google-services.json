@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "72538332659",
+    "project_id": "go-track-e4f16",
+    "storage_bucket": "go-track-e4f16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72538332659:android:b4a4dca136c9b58fc90686",
+        "android_client_info": {
+          "package_name": "za.co.msocio.gotrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72538332659-tr4dpb1h5p9n1cs4ap35lh488t3ic4gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLJoEwP4ksZWqSo8LDzd5Wpfgj9xUW5Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72538332659-tr4dpb1h5p9n1cs4ap35lh488t3ic4gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72538332659:android:a5656059d6f8ce09c90686",
+        "android_client_info": {
+          "package_name": "za.co.msocios.gotrackadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72538332659-tr4dpb1h5p9n1cs4ap35lh488t3ic4gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLJoEwP4ksZWqSo8LDzd5Wpfgj9xUW5Yg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72538332659-tr4dpb1h5p9n1cs4ap35lh488t3ic4gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
