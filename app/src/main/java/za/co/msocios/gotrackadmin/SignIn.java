@@ -105,7 +105,7 @@ public class SignIn extends AppCompatActivity {
                                 public void onClick(DialogInterface dialog, int id) {
                                     // User cancelled the dialog
                                     auth.signOut();
-                                    
+
                                     dialog.cancel();
                                 }
                             }).show();
