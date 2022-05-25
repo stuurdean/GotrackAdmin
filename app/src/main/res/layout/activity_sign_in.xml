@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/roboto_bold"
-            android:text="Parents Sign In"
+            android:text="ADMINISTRATOR"
             android:textAlignment="center"
             android:textSize="24sp" />
 
