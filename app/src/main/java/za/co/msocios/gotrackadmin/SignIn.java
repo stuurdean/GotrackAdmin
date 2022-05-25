@@ -1,18 +1,25 @@
 package za.co.msocios.gotrackadmin;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SignIn extends AppCompatActivity {
@@ -35,7 +42,7 @@ public class SignIn extends AppCompatActivity {
         password = findViewById(R.id.inputPassword);
         signIn = findViewById(R.id.btnSignIn);
         forgotPassword = findViewById(R.id.btnPassword);
-        signUp = findViewById(R.id.btnSignUp);
+
 
 
         //progress d
@@ -68,5 +75,49 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+    private void logging() {
+
+        // get edittext value and converting them to string
+        progressDialog.show();
+        String inputEmail =email.getText().toString();
+        String inputPassword = password.getText().toString();
+
+        auth.signInWithEmailAndPassword(inputEmail,inputPassword).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                progressDialog.dismiss();
+
+                // startActivity(new Intent(ParentSignIn.this,ParentDashboard.class));
+                finish();
+
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressDialog.dismiss();
+                Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                // Use the Builder class for convenient dialog construction
+                // AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("ERROR").setIcon(R.drawable.ic_baseline_error_24)
+                        .setMessage(e.getMessage())
+                        .setCancelable(false)
+
+                        .setNegativeButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // User cancelled the dialog
+                                dialog.cancel();
+                            }
+                        }).show();
+                // Create the AlertDialog object and return it
+                //builder.create();
+
+                //  builder.show();
+
+            }
+        });
+
     }
 }
