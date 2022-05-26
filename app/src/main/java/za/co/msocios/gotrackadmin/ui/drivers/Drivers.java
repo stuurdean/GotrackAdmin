@@ -24,14 +24,14 @@ public class Drivers extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        DriversViewModel galleryViewModel =
+        DriversViewModel driverViewModel =
                 new ViewModelProvider(this).get(DriversViewModel.class);
 
         binding = DriversFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textDriver;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        driverViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
