@@ -16,5 +16,15 @@
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_slideshow" />
+        <item android:id="@+id/nav_driver"
+            android:icon="@drawable/ic_baseline_drive_eta_24"
+            android:title="Driver"/>
+        <item android:id="@+id/nav_parent"
+            android:title="Parents"
+            android:icon="@drawable/ic_baseline_people_24"/>
+        <item android:id="@+id/nav_child"
+            android:title="Children"
+            android:icon="@drawable/ic_baseline_child_care_24"
+            />
     </group>
 </menu>
