@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static int SPLASH=5000;
-    private FirebaseAuth auth;
+    public FirebaseAuth auth;
     FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
     @Override
@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 FirebaseUser currentUser = auth.getCurrentUser();
-                if (currentUser.isEmailVerified())
+                if (currentUser!=null)
                 {
                     //startActivity(new Intent());
                 }
                 else
                 {
-                    startActivity(new Intent(MainActivity.this,SignIn.class));
+                    startActivity(new Intent(MainActivity.this,DashBoards.class));
                     finish();
                 }
             }
