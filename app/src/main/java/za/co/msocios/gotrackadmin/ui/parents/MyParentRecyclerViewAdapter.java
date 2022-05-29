@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import za.co.msocios.gotrackadmin.databinding.ParentViewBinding;
 import za.co.msocios.gotrackadmin.ui.parents.placeholder.PlaceholderContent.PlaceholderItem;
-import za.co.msocios.gotrackadmin.ui.parents.databinding.ParentViewBinding;
+
 
 import java.util.List;
 
