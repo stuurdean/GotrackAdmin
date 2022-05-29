@@ -5,13 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.parents.ParentsFragment">
 
-    <ScrollView
+    <ListView
+        android:id="@+id/parentsList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" />
 
-        <ListView
-            android:id="@+id/parentsList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
 </FrameLayout>

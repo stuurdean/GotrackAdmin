@@ -2,16 +2,21 @@ package za.co.msocios.gotrackadmin.ui.children;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import  com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.R;
+import za.co.msocios.gotrackadmin.ViewModels.ChildViewHolder;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -26,6 +31,9 @@ public class ChildrenFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     RecyclerView recyclerView;
+    FirebaseFirestore firestore;
+    Query query;
+
     FirestoreRecyclerAdapter adapter;
     FirestoreRecyclerOptions options;
 
@@ -63,6 +71,23 @@ public class ChildrenFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
+        query= firestore.collection("Children");
+
+        options = new FirestoreRecyclerOptions.Builder<Child>().setQuery(query,Child.class).build();
+
+        adapter = new FirestoreRecyclerAdapter<Child, ChildViewHolder>(options) {
+            @NonNull
+            @Override
+            public ChildViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return new ChildViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.child,parent,false));
+            }
+
+            @Override
+            protected void onBindViewHolder(@NonNull ChildViewHolder holder, int position, @NonNull Child model) {
+
+                holder.childName.setText(model);
+            }
+        };
 
 
     }

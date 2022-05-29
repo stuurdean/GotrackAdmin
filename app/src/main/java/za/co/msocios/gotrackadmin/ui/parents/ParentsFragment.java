@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -49,7 +51,16 @@ public class ParentsFragment extends Fragment {
 
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
-        firestore.collection("Parents").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+
+
+        firestore.collection("Parents").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+            }
+        });
+
+       firestore.collection("Parents").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
@@ -59,7 +70,10 @@ public class ParentsFragment extends Fragment {
                     {
                         arrayList.add(documentSnapshots.getId());
                         arrayAdapter.notifyDataSetChanged();
+                        Log.d("firebase", String.valueOf(task.getResult().size()));
                     }
+
+
                 }
             }
         });

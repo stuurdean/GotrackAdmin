@@ -32,4 +32,10 @@
         android:name="za.co.msocios.gotrackadmin.ui.drivers.Drivers"
         android:label="Driver"
         tools:layout="@layout/drivers_fragment" />
+
+    <fragment
+        android:id="@+id/nav_child"
+        android:name="za.co.msocios.gotrackadmin.ui.children.ChildrenFragment"
+        android:label="Chidren"
+        tools:layout="@layout/fragment_children" />
 </navigation>
