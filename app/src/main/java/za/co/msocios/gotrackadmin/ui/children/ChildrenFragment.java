@@ -1,14 +1,17 @@
 package za.co.msocios.gotrackadmin.ui.children;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import  com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.squareup.picasso.Picasso;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +34,7 @@ public class ChildrenFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     RecyclerView recyclerView;
-    FirebaseFirestore firestore;
+    FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     Query query;
 
     FirestoreRecyclerAdapter adapter;
@@ -85,7 +88,11 @@ public class ChildrenFragment extends Fragment {
             @Override
             protected void onBindViewHolder(@NonNull ChildViewHolder holder, int position, @NonNull Child model) {
 
-                holder.childName.setText(model);
+                holder.childName.setText(model.getFullNames());
+                holder.schoolName.setText(model.getSchoolName());
+                holder.childState.setText(model.getState());
+
+                Picasso.get().load(model.getImage()).into(holder.childPic);
             }
         };
 
@@ -99,7 +106,18 @@ public class ChildrenFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_children, container, false);
 
         recyclerView = view.findViewById(R.id.childview);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(adapter);
 
+
+        adapter.startListening();
         return view;
+    }
+
+    @Override
+    public void startActivity(Intent intent) {
+        super.startActivity(intent);
+
+        adapter.startListening();
     }
 }
