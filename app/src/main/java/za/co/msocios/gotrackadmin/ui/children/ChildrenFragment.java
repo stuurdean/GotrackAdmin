@@ -16,7 +16,9 @@ import com.squareup.picasso.Picasso;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.R;
 import za.co.msocios.gotrackadmin.ViewModels.ChildViewHolder;
@@ -93,6 +95,14 @@ public class ChildrenFragment extends Fragment {
                 holder.childState.setText(model.getState());
 
                 Picasso.get().load(model.getImage()).into(holder.childPic);
+
+                final Child ClickItem = model;
+                holder.setItemClickListener(new ItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position, boolean isLongClick) {
+                        Toast.makeText(getContext(),"Clicked"+model.getFullNames(),Toast.LENGTH_LONG).show();
+                    }
+                });
             }
         };
 

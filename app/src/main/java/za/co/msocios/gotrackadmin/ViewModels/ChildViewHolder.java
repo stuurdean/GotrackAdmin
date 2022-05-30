@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.R;
 
 public class ChildViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -18,7 +19,7 @@ public class ChildViewHolder extends RecyclerView.ViewHolder implements View.OnC
     public TextView childState;
     public ImageView childPic;
 
-    //private ItemClickListener itemClickListener;
+    private ItemClickListener itemClickListener;
 
     public ChildViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -28,10 +29,16 @@ public class ChildViewHolder extends RecyclerView.ViewHolder implements View.OnC
         childState = itemView.findViewById(R.id.txtState);
 
         childPic = itemView.findViewById(R.id.childImage);
+        itemView.setOnClickListener(this);
+    }
+    public void setItemClickListener(ItemClickListener itemClickListener) {
+        this.itemClickListener = itemClickListener;
     }
 
     @Override
     public void onClick(View view) {
-
+        itemClickListener.onClick(view,getAdapterPosition(),false);
     }
+
+
 }
