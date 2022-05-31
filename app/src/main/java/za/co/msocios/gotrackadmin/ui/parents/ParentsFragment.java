@@ -24,6 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import za.co.msocios.gotrackadmin.Models.Parent;
 import za.co.msocios.gotrackadmin.R;
 
 public class ParentsFragment extends Fragment {
@@ -68,7 +69,8 @@ public class ParentsFragment extends Fragment {
                 {
                     for (QueryDocumentSnapshot documentSnapshots: task.getResult())
                     {
-                        arrayList.add(documentSnapshots.getId());
+                        Parent parent = documentSnapshots.toObject(Parent.class);
+                        arrayList.add(parent.getNames());
                         arrayAdapter.notifyDataSetChanged();
                         Log.d("firebase", String.valueOf(task.getResult().size()));
                     }
