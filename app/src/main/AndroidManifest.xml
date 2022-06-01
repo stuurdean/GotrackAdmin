@@ -11,7 +11,9 @@
         android:theme="@style/Theme.GoTrackAdmin">
         <activity
             android:name=".ChildDetails"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".DashBoards"
+            />
         <activity
             android:name=".DashBoards"
             android:exported="false"
