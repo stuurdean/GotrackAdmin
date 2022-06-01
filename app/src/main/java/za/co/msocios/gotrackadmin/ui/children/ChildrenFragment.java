@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import za.co.msocios.gotrackadmin.ChildDetails;
 import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.R;
@@ -101,6 +102,8 @@ public class ChildrenFragment extends Fragment {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         Toast.makeText(getContext(),"Clicked"+model.getFullNames(),Toast.LENGTH_LONG).show();
+
+                        startActivity(new Intent(getActivity(), ChildDetails.class));
                     }
                 });
             }
