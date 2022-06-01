@@ -3,34 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/bluebutton.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/ic_baseline_error_24.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/orange.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/side_nav_bar.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/white.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/drawable/whiteBG.xml" value="0.122" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/activity_dash_boards.xml" value="0.15364583333333334" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/activity_dashboard.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/app_bar_dash_boards.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/child.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/content_dash_boards.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/drivers_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/fragment_children.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/fragment_home.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/fragment_item_list.xml" value="0.165625" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/fragment_slideshow.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/header.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/nav_header_dash_boards.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/parent_view.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/layout/parents_fragment.xml" value="0.1" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/menu/activity_main_drawer.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/menu/dash_boards.xml" value="0.1796875" />
-        <entry key="..\:/Users/Stuur/AndroidStudioProjects/GotrackAdmin/app/src/main/res/menu/main_menu.xml" value="0.1796875" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_child_details.xml" value="0.22447916666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_main.xml" value="0.21041666666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_sign_in.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/menu/activity_main_drawer.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/menu/dash_boards.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>
