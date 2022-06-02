@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTrackAdmin">
         <activity
+            android:name=".AssignDriverActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DriverActivity"
+            android:exported="false" />
+        <activity
             android:name=".ParentActivity"
             android:exported="false" />
         <activity
