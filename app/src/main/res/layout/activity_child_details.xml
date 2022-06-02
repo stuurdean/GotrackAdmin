@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:background="@color/orange">
+                app:cardBackgroundColor="@color/blue">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -47,22 +47,22 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center|center_horizontal"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
-                            android:gravity="center"
                             android:text="Full Names"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/txtFullnames"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
                             android:text="TextView"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
 
@@ -74,22 +74,23 @@
 
                         <TextView
                             android:id="@+id/textView5"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_horizontal"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
-                            android:gravity="center"
                             android:text="Date of birth"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/textView6"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
                             android:text="TextView"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
 
@@ -100,29 +101,92 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center|center_horizontal"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
-                            android:gravity="center"
                             android:text="Address"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
 
                         <TextView
                             android:id="@+id/txt_address"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:fontFamily="@font/roboto"
                             android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Parent"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_parent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="TextView"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|center_horizontal"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Parent Phone"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txt_parentPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="TextView"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
                     </LinearLayout>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
-
+                <Button
+                    android:id="@+id/txt_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:backgroundTint="@null"
+                    android:background="@color/orange"
+                    app:icon="@drawable/ic_baseline_call_24"
+                    android:text="Call" />
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -153,7 +217,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
                             android:text="School Name"
                             android:textSize="18sp" />
 
@@ -177,7 +240,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
                             android:text="School Address"
                             android:textSize="18sp" />
 
@@ -200,7 +262,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
                             android:text="Grade"
                             android:textSize="18sp" />
 
@@ -224,8 +285,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="In"
+                            android:text="School Start Time"
                             android:textSize="18sp" />
 
                         <TextView
@@ -248,7 +308,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:gravity="center"
                             android:text="Out"
                             android:textSize="18sp" />
 
@@ -261,6 +320,57 @@
                             android:textSize="18sp" />
                     </LinearLayout>
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Driver Details"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:text="Driver Name"/>
+
+                        <TextView
+                            android:id="@+id/txt_driverName"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content"
+                            android:text="TextView"/>
+
+                    </LinearLayout>
+                        <Button
+                            android:id="@+id/btndriver"
+                            android:layout_width="match_parent"
+                            app:backgroundTint="@null"
+                            android:layout_margin="10dp"
+                            android:background="@color/orange"
+                            android:layout_height="wrap_content"
+                            android:text="Assign"/>
+                </LinearLayout>
+
+
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>

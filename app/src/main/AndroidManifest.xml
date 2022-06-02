@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTrackAdmin">
         <activity
+            android:name=".ParentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ChildDetails"
             android:exported="false"
-            android:parentActivityName=".DashBoards"
-            />
+            android:parentActivityName=".DashBoards" />
         <activity
             android:name=".DashBoards"
             android:exported="false"
