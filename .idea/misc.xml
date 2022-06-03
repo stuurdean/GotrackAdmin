@@ -3,9 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_assign_driver.xml" value="0.22447916666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_child_details.xml" value="0.14" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_dash_boards.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_dashboard.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_driver.xml" value="0.22447916666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_main.xml" value="0.21041666666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_parent.xml" value="0.21041666666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/activity_sign_in.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/fragment_home.xml" value="0.22447916666666667" />
+        <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/layout/parents.xml" value="0.22447916666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/menu/activity_main_drawer.xml" value="0.22447916666666667" />
         <entry key="..\:/WORKSPACE/MOBILE APP/ANDROID/GotrackAdmin/app/src/main/res/menu/dash_boards.xml" value="0.22447916666666667" />
       </map>
