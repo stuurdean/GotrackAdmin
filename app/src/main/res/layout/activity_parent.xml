@@ -22,6 +22,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textnames"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -92,6 +93,7 @@
             android:orientation="vertical" >
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/childrecycle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp" />

@@ -1,6 +1,6 @@
 package za.co.msocios.gotrackadmin.ui.parents;
 
-import androidx.lifecycle.ViewModelProvider;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,7 +42,7 @@ import za.co.msocios.gotrackadmin.ViewModels.ParentViewHolder;
 
 public class ParentsFragment extends Fragment {
 
-    private ParentsViewModel mViewModel;
+
 
     RecyclerView recyclerView;
     FirebaseFirestore firestore = FirebaseFirestore.getInstance();
@@ -85,13 +85,69 @@ public class ParentsFragment extends Fragment {
 
                holder.parentTxt.setText(model.getNames());
 
+               final String uid= getSnapshots().getSnapshot(position).getId();
+
                 final Parent ClickedItem = model;
 
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
+                        Intent parentView =new Intent(getActivity(), ParentActivity.class);
+                        parentView.putExtra("uid",uid);
 
-                        startActivity(new Intent(getActivity(), ParentActivity.class));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        startActivity(parentView);
                     }
                 });
 
@@ -157,8 +213,7 @@ public class ParentsFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(ParentsViewModel.class);
-        // TODO: Use the ViewModel
+
     }
 
 }
