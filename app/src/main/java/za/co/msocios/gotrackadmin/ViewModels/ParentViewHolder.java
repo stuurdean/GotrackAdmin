@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
+import za.co.msocios.gotrackadmin.R;
 
 public class ParentViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -17,6 +18,9 @@ public class ParentViewHolder extends RecyclerView.ViewHolder implements View.On
 
     public ParentViewHolder(@NonNull View itemView) {
         super(itemView);
+
+        parentTxt = itemView.findViewById(R.id.txt_parentName);
+        itemView.setOnClickListener(this);
     }
 
     public void setItemClickListener(ItemClickListener itemClickListener) {

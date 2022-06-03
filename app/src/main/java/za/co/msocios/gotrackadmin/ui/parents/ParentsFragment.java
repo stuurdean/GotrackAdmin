@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,21 +18,34 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.Models.Parent;
 import za.co.msocios.gotrackadmin.R;
+import za.co.msocios.gotrackadmin.ViewModels.ChildViewHolder;
+import za.co.msocios.gotrackadmin.ViewModels.ParentViewHolder;
 
 public class ParentsFragment extends Fragment {
 
     private ParentsViewModel mViewModel;
+
+    RecyclerView recyclerView;
+    FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+    Query query;
+
+    FirestoreRecyclerAdapter adapter;
+    FirestoreRecyclerOptions options;
 
     ListView listView;
     ArrayList<String> arrayList = new ArrayList<>();
@@ -49,8 +63,27 @@ public class ParentsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        query= firestore.collection("Parents");
 
-        arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,arrayList);
+        options = new FirestoreRecyclerOptions.Builder<Parent>().setQuery(query,Parent.class).build();
+
+        adapter = new FirestoreRecyclerAdapter<Parent, ParentViewHolder>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull ParentViewHolder holder, int position, @NonNull Parent model) {
+
+
+
+            }
+
+            @NonNull
+            @Override
+            public ParentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return new  ParentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.parent_view,parent,false));
+            }
+        };
+
+
+    /*    arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1,arrayList);
 
         FirebaseFirestore firestore = FirebaseFirestore.getInstance();
 
@@ -80,7 +113,7 @@ public class ParentsFragment extends Fragment {
 
                 }
             }
-        });
+        });  */
 
 
 
