@@ -2,11 +2,13 @@ package za.co.msocios.gotrackadmin.ui.parents;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -30,8 +32,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.Models.Parent;
+import za.co.msocios.gotrackadmin.ParentActivity;
 import za.co.msocios.gotrackadmin.R;
 import za.co.msocios.gotrackadmin.ViewModels.ChildViewHolder;
 import za.co.msocios.gotrackadmin.ViewModels.ParentViewHolder;
@@ -68,18 +72,32 @@ public class ParentsFragment extends Fragment {
         options = new FirestoreRecyclerOptions.Builder<Parent>().setQuery(query,Parent.class).build();
 
         adapter = new FirestoreRecyclerAdapter<Parent, ParentViewHolder>(options) {
-            @Override
-            protected void onBindViewHolder(@NonNull ParentViewHolder holder, int position, @NonNull Parent model) {
 
-
-
-            }
 
             @NonNull
             @Override
             public ParentViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return new  ParentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.parent_view,parent,false));
+                return new  ParentViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.parents,parent,false));
             }
+
+            @Override
+            protected void onBindViewHolder(@NonNull ParentViewHolder holder, int position, @NonNull Parent model) {
+
+               holder.parentTxt.setText(model.getNames());
+
+                final Parent ClickedItem = model;
+
+                holder.setItemClickListener(new ItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position, boolean isLongClick) {
+
+                        startActivity(new Intent(getActivity(), ParentActivity.class));
+                    }
+                });
+
+
+            }
+
         };
 
 
@@ -125,15 +143,13 @@ public class ParentsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
        View view =inflater.inflate(R.layout.parents_fragment, container, false);
 
-       listView = view.findViewById(R.id.parentsList);
+        recyclerView = view.findViewById(R.id.parentRecycle);
 
-       listView.setAdapter(arrayAdapter);
-       listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-           @Override
-           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               Toast.makeText(getContext(), "Clicked"+adapterView, Toast.LENGTH_SHORT).show();
-           }
-       });
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        recyclerView.setAdapter(adapter);
+
+        adapter.startListening();
 
        return  view;
     }
