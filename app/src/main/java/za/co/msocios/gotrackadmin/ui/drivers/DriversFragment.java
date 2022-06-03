@@ -80,7 +80,7 @@ public class DriversFragment extends Fragment {
         }
 
 
-        query= firestore.collection("Children");
+        query= firestore.collection("Drivers");
 
         options = new FirestoreRecyclerOptions.Builder<Driver>().setQuery(query,Driver.class).build();
 
@@ -98,7 +98,7 @@ public class DriversFragment extends Fragment {
                 holder.vehicle.setText(model.getVehicle());
                 holder.vehicleRegNo.setText(model.getVihicleReg());
 
-                Picasso.get().load(model.getDriverImage()).into(holder.childPic);
+                Picasso.get().load(model.getDriverImage()).into(holder.DriverImage);
 
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
