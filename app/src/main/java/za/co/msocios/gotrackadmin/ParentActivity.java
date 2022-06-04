@@ -13,7 +13,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class ParentActivity extends AppCompatActivity {
-    String uid;
+    String uid,FullName,phoneNumer,Email;
     FirebaseFirestore firestore;
     TextView fullnamestxt,phonetxt,emailtxt;
 
@@ -31,6 +31,7 @@ public class ParentActivity extends AppCompatActivity {
         emailtxt =findViewById(R.id.txt_email);
         firestore = FirebaseFirestore.getInstance();
 
+
         firestore.collection("Parents").document(uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -39,15 +40,21 @@ public class ParentActivity extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists())
                     {
-                        fullnamestxt.setText(document.get("names").toString());
-                        phonetxt.setText(document.get("phoneNumber").toString());
-                        emailtxt.setText(document.get("email").toString());
+                        FullName = document.get("Names").toString();
+                       // phoneNumer = document.get("phonumber").toString();
+                       // Email = document.get("email").toString();
+
+
+                        fullnamestxt.setText(FullName);
+                       //phonetxt.setText(phoneNumer);
+                       //emailtxt.setText(Email);
                     }
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+
 
             }
         });
