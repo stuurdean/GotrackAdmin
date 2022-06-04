@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class ChildDetails extends AppCompatActivity {
 
     Button btnAssign;
-    TextView fullname,age,address,parentname,parentPhone,schoolName
+    TextView fullname,age,address,parentname,parentPhone,schoolname,schoolAdress,grade,startTime,outTime,drivername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,18 @@ public class ChildDetails extends AppCompatActivity {
         //actionBar.setDisplayHomeAsUpEnabled(true);
 
         btnAssign = findViewById(R.id.btndriver);
+        fullname = findViewById(R.id.txtFullnames);
+        age = findViewById(R.id.age);
+        address = findViewById(R.id.txt_address);
+        parentname = findViewById(R.id.txt_parent);
+        parentPhone = findViewById(R.id.txt_parentPhone);
+        schoolname = findViewById(R.id.txtSchoolName);
+        schoolAdress = findViewById(R.id.txt_address);
+        grade = findViewById(R.id.txt_grade);
+        startTime = findViewById(R.id.txt_In);
+        outTime = findViewById(R.id.txt_out);
+        drivername = findViewById(R.id.txt_driverName);
+
 
 
         btnAssign.setOnClickListener(new View.OnClickListener() {
