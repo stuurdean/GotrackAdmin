@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import za.co.msocios.gotrackadmin.ChildDetails;
+import za.co.msocios.gotrackadmin.Common.Common;
 import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.R;
@@ -96,14 +97,20 @@ public class ChildrenFragment extends Fragment {
                 holder.childState.setText(model.getState());
 
                 Picasso.get().load(model.getImage()).into(holder.childPic);
+                final  String docId = getSnapshots().getSnapshot(position).getId();
+
 
                 final Child ClickItem = model;
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
+
+                        Common.selectedChild = model;
                         Toast.makeText(getContext(),"Clicked"+model.getFullNames(),Toast.LENGTH_LONG).show();
 
-                        startActivity(new Intent(getActivity(), ChildDetails.class));
+                        Intent intent = new Intent(getActivity(), ChildDetails.class);
+                        intent.putExtra("docId",docId);
+                        startActivity(intent);
                     }
                 });
             }
