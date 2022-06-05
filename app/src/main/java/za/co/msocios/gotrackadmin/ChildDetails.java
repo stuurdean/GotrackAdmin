@@ -96,7 +96,10 @@ public class ChildDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(ChildDetails.this,AssignDriverActivity.class));
+                Intent intent = new Intent(ChildDetails.this,AssignDriverActivity.class);
+
+                intent.putExtra("docId",docId);
+                startActivity(intent);
             }
         });
 
