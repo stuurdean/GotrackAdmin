@@ -66,7 +66,7 @@ public class ParentActivity extends AppCompatActivity {
 
 
 
-        query= firestore.collection("Children");
+        query= firestore.collection("Children").whereEqualTo("parent",uid);
 
         options = new FirestoreRecyclerOptions.Builder<Child>().setQuery(query,Child.class).build();
 
