@@ -2,102 +2,132 @@ package za.co.msocios.gotrackadmin.Models;
 
 public class Child {
 
-    private  String FullNames,SchoolName,Grade,Address,DateOfBirth,Image,InTime,OutTime,Driver,State;
 
-    public Child() {
 
-    }
+        private  String FullNames,SchoolName,Grade,Address,DateOfBirth,Image,InTime,OutTime,Driver,State,Parent,SchoolAddress,Gender;
 
-    public Child(String fullNames, String schoolName, String grade, String address, String dateOfBirth, String image, String inTime, String outTime, String driver,String state) {
-        FullNames = fullNames;
-        SchoolName = schoolName;
-        Grade = grade;
-        Address = address;
-        DateOfBirth = dateOfBirth;
-        Image = image;
-        InTime = inTime;
-        OutTime = outTime;
-        Driver = driver;
-        State = state;
-    }
+        public Child() {
 
-    public String getFullNames() {
-        return FullNames;
-    }
+        }
 
-    public void setFullNames(String fullNames) {
-        FullNames = fullNames;
-    }
+        public String getParent() {
+            return Parent;
+        }
 
-    public String getSchoolName() {
-        return SchoolName;
-    }
+        public void setParent(String parent) {
+            Parent = parent;
+        }
 
-    public void setSchoolName(String schoolName) {
-        SchoolName = schoolName;
-    }
+        public String getGender() {
+            return Gender;
+        }
 
-    public String getGrade() {
-        return Grade;
-    }
+        public void setGender(String gender) {
+            Gender = gender;
+        }
 
-    public void setGrade(String grade) {
-        Grade = grade;
-    }
+        public Child(String fullNames, String schoolName, String grade, String address, String dateOfBirth, String image, String inTime, String outTime, String driver, String state, String parent, String schoolAddress, String gender) {
+            FullNames = fullNames;
+            SchoolName = schoolName;
+            Grade = grade;
+            Address = address;
+            DateOfBirth = dateOfBirth;
+            Image = image;
+            InTime = inTime;
+            OutTime = outTime;
+            Driver = driver;
+            State = state;
+            Parent = parent;
+            SchoolAddress = schoolAddress;
+            Gender = gender;
+        }
 
-    public String getAddress() {
-        return Address;
-    }
+        public String getFullNames() {
+            return FullNames;
+        }
 
-    public void setAddress(String address) {
-        Address = address;
-    }
+        public void setFullNames(String fullNames) {
+            FullNames = fullNames;
+        }
 
-    public String getDateOfBirth() {
-        return DateOfBirth;
-    }
+        public String getSchoolName() {
+            return SchoolName;
+        }
 
-    public void setDateOfBirth(String dateOfBirth) {
-        DateOfBirth = dateOfBirth;
-    }
+        public void setSchoolName(String schoolName) {
+            SchoolName = schoolName;
+        }
 
-    public String getImage() {
-        return Image;
-    }
+        public String getGrade() {
+            return Grade;
+        }
 
-    public void setImage(String image) {
-        Image = image;
-    }
+        public void setGrade(String grade) {
+            Grade = grade;
+        }
 
-    public String getInTime() {
-        return InTime;
-    }
+        public String getAddress() {
+            return Address;
+        }
 
-    public void setInTime(String inTime) {
-        InTime = inTime;
-    }
+        public void setAddress(String address) {
+            Address = address;
+        }
 
-    public String getOutTime() {
-        return OutTime;
-    }
+        public String getDateOfBirth() {
+            return DateOfBirth;
+        }
 
-    public void setOutTime(String outTime) {
-        OutTime = outTime;
-    }
+        public void setDateOfBirth(String dateOfBirth) {
+            DateOfBirth = dateOfBirth;
+        }
 
-    public String getDriver() {
-        return Driver;
-    }
+        public String getImage() {
+            return Image;
+        }
 
-    public void setDriver(String driver) {
-        Driver = driver;
-    }
+        public void setImage(String image) {
+            Image = image;
+        }
 
-    public String getState() {
-        return State;
-    }
+        public String getInTime() {
+            return InTime;
+        }
 
-    public void setState(String state) {
-        State = state;
-    }
+        public void setInTime(String inTime) {
+            InTime = inTime;
+        }
+
+        public String getOutTime() {
+            return OutTime;
+        }
+
+        public void setOutTime(String outTime) {
+            OutTime = outTime;
+        }
+
+        public String getDriver() {
+            return Driver;
+        }
+
+        public void setDriver(String driver) {
+            Driver = driver;
+        }
+
+        public String getState() {
+            return State;
+        }
+
+        public void setState(String state) {
+            State = state;
+        }
+
+        public String getSchoolAddress() {
+            return SchoolAddress;
+        }
+
+        public void setSchoolAddress(String schoolAddress) {
+            SchoolAddress = schoolAddress;
+        }
+
 }
