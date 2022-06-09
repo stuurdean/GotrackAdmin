@@ -23,7 +23,7 @@ import za.co.msocios.gotrackadmin.Models.Child;
 
 public class ChildDetails extends AppCompatActivity {
 
-    Button btnAssign;
+    Button btnAssign,btnCall;
     TextView fullname,age,address,parentname,parentPhone,schoolname,schoolAdress,grade,startTime,outTime,drivername;
     String docId ;
     ImageView image;
@@ -51,6 +51,8 @@ public class ChildDetails extends AppCompatActivity {
         startTime = findViewById(R.id.txt_In);
         outTime = findViewById(R.id.txt_out);
         drivername = findViewById(R.id.txt_driverName);
+
+        btnCall = findViewById(R.id.btn_call);
 
         image = findViewById(R.id.childImageView);
 
@@ -100,6 +102,14 @@ public class ChildDetails extends AppCompatActivity {
 
                 intent.putExtra("docId",docId);
                 startActivity(intent);
+            }
+        });
+
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
             }
         });
 
