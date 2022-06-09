@@ -2,7 +2,7 @@ package za.co.msocios.gotrackadmin.Models;
 
 public class Driver {
 
-    private String Names,Surname,Vehicle,VihicleReg,DriverImage;
+    private String Names,Surname,CarName,CarReg,DriverImage;
 
     public Driver() {
     }
@@ -11,8 +11,8 @@ public class Driver {
 
         Names = names;
         Surname = surname;
-        Vehicle = vehicle;
-        VihicleReg = vihicleReg;
+        CarName = vehicle;
+        CarReg = vihicleReg;
         DriverImage = driverImage;
     }
 
@@ -32,20 +32,20 @@ public class Driver {
         Surname = surname;
     }
 
-    public String getVehicle() {
-        return Vehicle;
+    public String getCarName() {
+        return CarName;
     }
 
-    public void setVehicle(String vehicle) {
-        Vehicle = vehicle;
+    public void setCarName(String carName) {
+        CarName = carName;
     }
 
-    public String getVihicleReg() {
-        return VihicleReg;
+    public String getCarReg() {
+        return CarReg;
     }
 
-    public void setVihicleReg(String vihicleReg) {
-        VihicleReg = vihicleReg;
+    public void setCarReg(String carReg) {
+        CarReg = carReg;
     }
 
     public String getDriverImage() {

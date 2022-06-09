@@ -116,32 +116,14 @@ public class ParentActivity extends AppCompatActivity {
         adapter.startListening();
 
 
-        firestore.collection("Parents").document(uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful())
-                {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists())
-                    {
-                        FullName = document.get("names").toString();
-                       phoneNumer = document.get("phonenumber").toString();
-                       Email = document.get("email").toString();
+
+        fullnamestxt.setText(Common.selectedParent.getNames());
+        phonetxt.setText(Common.selectedParent.getPhoneNumber());
+        emailtxt.setText(Common.selectedParent.getEmail());
 
 
-                        fullnamestxt.setText(FullName);
-                       phonetxt.setText(phoneNumer);
-                       emailtxt.setText(Email);
-                    }
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
 
 
-            }
-        });
 
     }
 }

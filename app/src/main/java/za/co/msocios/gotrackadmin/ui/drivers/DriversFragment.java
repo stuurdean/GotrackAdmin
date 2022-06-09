@@ -95,10 +95,9 @@ public class DriversFragment extends Fragment {
             protected void onBindViewHolder(@NonNull DriverViewHolder holder, int position, @NonNull Driver model) {
 
                 holder.DriverName.setText(model.getNames()+" "+model.getSurname());
-                holder.vehicle.setText(model.getVehicle());
-                holder.vehicleRegNo.setText(model.getVihicleReg());
+                holder.vehicle.setText(model.getCarName());
+                holder.vehicleRegNo.setText(model.getCarReg());
 
-                Picasso.get().load(model.getDriverImage()).into(holder.DriverImage);
 
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
