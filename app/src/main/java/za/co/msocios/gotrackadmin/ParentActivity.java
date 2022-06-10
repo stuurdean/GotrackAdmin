@@ -1,7 +1,5 @@
 package za.co.msocios.gotrackadmin;
 
-import static java.security.AccessController.getContext;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,10 +15,6 @@ import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.squareup.picasso.Picasso;
@@ -116,32 +110,14 @@ public class ParentActivity extends AppCompatActivity {
         adapter.startListening();
 
 
-        firestore.collection("Parents").document(uid).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful())
-                {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists())
-                    {
-                        FullName = document.get("names").toString();
-                       phoneNumer = document.get("phonenumber").toString();
-                       Email = document.get("email").toString();
+
+        fullnamestxt.setText(Common.selectedParent.getNames());
+        phonetxt.setText(Common.selectedParent.getPhoneNumber());
+        emailtxt.setText(Common.selectedParent.getEmail());
 
 
-                        fullnamestxt.setText(FullName);
-                       phonetxt.setText(phoneNumer);
-                       emailtxt.setText(Email);
-                    }
-                }
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
 
 
-            }
-        });
 
     }
 }

@@ -32,6 +32,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
+import za.co.msocios.gotrackadmin.Common.Common;
 import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
 import za.co.msocios.gotrackadmin.Models.Parent;
@@ -94,6 +95,9 @@ public class ParentsFragment extends Fragment {
                     public void onClick(View view, int position, boolean isLongClick) {
                         Intent parentView =new Intent(getActivity(), ParentActivity.class);
                         parentView.putExtra("uid",uid);
+
+                        Common.selectedParent = model;
+
                         startActivity(parentView);
                     }
                 });

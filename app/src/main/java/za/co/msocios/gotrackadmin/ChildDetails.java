@@ -23,7 +23,7 @@ import za.co.msocios.gotrackadmin.Models.Child;
 
 public class ChildDetails extends AppCompatActivity {
 
-    Button btnAssign;
+    Button btnAssign,btnCall;
     TextView fullname,age,address,parentname,parentPhone,schoolname,schoolAdress,grade,startTime,outTime,drivername;
     String docId ;
     ImageView image;
@@ -46,11 +46,13 @@ public class ChildDetails extends AppCompatActivity {
         parentname = findViewById(R.id.txt_parent);
         parentPhone = findViewById(R.id.txt_parentPhone);
         schoolname = findViewById(R.id.txtSchoolName);
-        schoolAdress = findViewById(R.id.txt_address);
+        schoolAdress = findViewById(R.id.txt_schooladdress);
         grade = findViewById(R.id.txt_grade);
         startTime = findViewById(R.id.txt_In);
         outTime = findViewById(R.id.txt_out);
         drivername = findViewById(R.id.txt_driverName);
+
+        btnCall = findViewById(R.id.btn_call);
 
         image = findViewById(R.id.childImageView);
 
@@ -61,7 +63,7 @@ public class ChildDetails extends AppCompatActivity {
         // parentname.setText(Common.selectedChild.);
         // parentPhone = findViewById(R.id.txt_parentPhone);
         schoolname.setText(Common.selectedChild.getSchoolName());
-        schoolAdress.setText(Common.selectedChild.getSchoolAddress());
+        schoolAdress.setText(Common.selectedChild.getAddress());
         grade.setText(Common.selectedChild.getGrade());
         startTime.setText(Common.selectedChild.getInTime());
         outTime.setText(Common.selectedChild.getOutTime());
@@ -76,7 +78,7 @@ public class ChildDetails extends AppCompatActivity {
 
 
 
-        firestore.collection("Parents").document(docId).get()
+        firestore.collection("Parents").document(Common.selectedChild.getParent()).get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -100,6 +102,14 @@ public class ChildDetails extends AppCompatActivity {
 
                 intent.putExtra("docId",docId);
                 startActivity(intent);
+            }
+        });
+
+        btnCall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
             }
         });
 
