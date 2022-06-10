@@ -99,7 +99,10 @@ public class DriversFragment extends Fragment {
                 holder.vehicle.setText(model.getCarName());
                 holder.vehicleRegNo.setText(model.getCarReg());
 
+                final String uid= getSnapshots().getSnapshot(position).getId();
+
                 Common.selectedDriver = model;
+                Common.selectedDriver.setDriverUID(uid);
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
