@@ -35,7 +35,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/txtname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -44,7 +44,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/txtsurname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -53,7 +53,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/txtphone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="2dp"
@@ -62,7 +62,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView14"
+                    android:id="@+id/txtemail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"

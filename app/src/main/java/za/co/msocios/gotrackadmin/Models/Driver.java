@@ -2,18 +2,21 @@ package za.co.msocios.gotrackadmin.Models;
 
 public class Driver {
 
-    private String Names,Surname,CarName,CarReg,DriverImage;
+    private String Names,Surname,Email,PhoneNumber,ResidentialAdress,CarReg,CarName,Status,DriverUID;
 
     public Driver() {
     }
 
-    public Driver(String names, String surname, String vehicle, String vihicleReg, String driverImage) {
-
+    public Driver(String names, String surname, String email, String phoneNumber, String residentialAdress, String carReg, String carName, String status, String driverUID) {
         Names = names;
         Surname = surname;
-        CarName = vehicle;
-        CarReg = vihicleReg;
-        DriverImage = driverImage;
+        Email = email;
+        PhoneNumber = phoneNumber;
+        ResidentialAdress = residentialAdress;
+        CarReg = carReg;
+        CarName = carName;
+        Status = status;
+        DriverUID = driverUID;
     }
 
     public String getNames() {
@@ -48,11 +51,43 @@ public class Driver {
         CarReg = carReg;
     }
 
-    public String getDriverImage() {
-        return DriverImage;
+    public String getEmail() {
+        return Email;
     }
 
-    public void setDriverImage(String driverImage) {
-        DriverImage = driverImage;
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getPhoneNumber() {
+        return PhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
+    public String getResidentialAdress() {
+        return ResidentialAdress;
+    }
+
+    public void setResidentialAdress(String residentialAdress) {
+        ResidentialAdress = residentialAdress;
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
+    }
+
+    public String getDriverUID() {
+        return DriverUID;
+    }
+
+    public void setDriverUID(String driverUID) {
+        DriverUID = driverUID;
     }
 }

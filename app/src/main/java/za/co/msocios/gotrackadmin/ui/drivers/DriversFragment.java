@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.squareup.picasso.Picasso;
 
+import za.co.msocios.gotrackadmin.Common.Common;
 import za.co.msocios.gotrackadmin.DriverActivity;
 import za.co.msocios.gotrackadmin.Interface.ItemClickListener;
 import za.co.msocios.gotrackadmin.Models.Child;
@@ -98,7 +99,7 @@ public class DriversFragment extends Fragment {
                 holder.vehicle.setText(model.getCarName());
                 holder.vehicleRegNo.setText(model.getCarReg());
 
-
+                Common.selectedDriver = model;
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
