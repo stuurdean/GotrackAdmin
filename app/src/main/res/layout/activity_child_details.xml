@@ -361,14 +361,6 @@
                             android:text="TextView"/>
 
                     </LinearLayout>
-                        <Button
-                            android:id="@+id/btndriver"
-                            android:layout_width="match_parent"
-                            app:backgroundTint="@null"
-                            android:layout_margin="10dp"
-                            android:background="@color/orange"
-                            android:layout_height="wrap_content"
-                            android:text="Assign"/>
                 </LinearLayout>
 
 

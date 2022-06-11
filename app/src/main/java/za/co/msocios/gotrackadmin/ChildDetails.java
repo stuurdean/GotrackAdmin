@@ -94,16 +94,7 @@ public class ChildDetails extends AppCompatActivity {
 
 
 
-        btnAssign.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(ChildDetails.this,AssignDriverActivity.class);
-
-                intent.putExtra("docId",docId);
-                startActivity(intent);
-            }
-        });
 
         btnCall.setOnClickListener(new View.OnClickListener() {
             @Override
