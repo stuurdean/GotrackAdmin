@@ -130,7 +130,7 @@ public class BillingFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_billing, container, false);
 
 
-        recyclerView = view.findViewById(R.id.childview);
+        recyclerView = view.findViewById(R.id.billingView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
 
