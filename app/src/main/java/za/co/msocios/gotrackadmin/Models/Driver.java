@@ -2,12 +2,12 @@ package za.co.msocios.gotrackadmin.Models;
 
 public class Driver {
 
-    private String Names,Surname,Email,PhoneNumber,ResidentialAdress,CarReg,CarName,Status,DriverUID;
+    private String Names,Surname,Email,PhoneNumber,ResidentialAdress,CarReg,CarName,Status,DriverUID,License;
 
     public Driver() {
     }
 
-    public Driver(String names, String surname, String email, String phoneNumber, String residentialAdress, String carReg, String carName, String status, String driverUID) {
+    public Driver(String names, String surname, String email, String phoneNumber, String residentialAdress, String carReg, String carName, String status, String driverUID,String license) {
         Names = names;
         Surname = surname;
         Email = email;
@@ -17,6 +17,7 @@ public class Driver {
         CarName = carName;
         Status = status;
         DriverUID = driverUID;
+        License = license;
     }
 
     public String getNames() {
@@ -89,5 +90,13 @@ public class Driver {
 
     public void setDriverUID(String driverUID) {
         DriverUID = driverUID;
+    }
+
+    public String getLicense() {
+        return License;
+    }
+
+    public void setLicense(String license) {
+        License = license;
     }
 }
