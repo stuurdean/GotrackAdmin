@@ -3,9 +3,6 @@ package za.co.msocios.gotrackadmin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +16,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
 import za.co.msocios.gotrackadmin.Common.Common;
-import za.co.msocios.gotrackadmin.Models.Child;
 
 public class ChildDetails extends AppCompatActivity {
 
@@ -40,7 +36,7 @@ public class ChildDetails extends AppCompatActivity {
         docId = getIntent().getStringExtra("docId");
 
         fullname = findViewById(R.id.txtFullnames);
-        age = findViewById(R.id.age);
+        age = findViewById(R.id.txtSchool);
         address = findViewById(R.id.txt_address);
         parentname = findViewById(R.id.txt_parent);
         parentPhone = findViewById(R.id.txt_parentPhone);

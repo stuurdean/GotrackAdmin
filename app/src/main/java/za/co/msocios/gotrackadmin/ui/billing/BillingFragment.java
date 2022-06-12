@@ -93,7 +93,7 @@ public class BillingFragment extends Fragment {
             @NonNull
             @Override
             public BillViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return new BillViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.child,parent,false));
+                return new BillViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.bill,parent,false));
             }
 
             @Override
