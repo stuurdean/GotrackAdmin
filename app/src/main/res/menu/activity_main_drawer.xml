@@ -27,7 +27,7 @@
 
         <item android:id="@+id/nav_Questions"
             android:title="Questions"
-            android:icon="@drawable/ic_baseline_payment_24"
+            android:icon="@drawable/ic_baseline_question_answer_24"
             />
     </group>
 </menu>
