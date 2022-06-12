@@ -39,7 +39,6 @@ public class ChildDetails extends AppCompatActivity {
 
         docId = getIntent().getStringExtra("docId");
 
-        btnAssign = findViewById(R.id.btndriver);
         fullname = findViewById(R.id.txtFullnames);
         age = findViewById(R.id.age);
         address = findViewById(R.id.txt_address);

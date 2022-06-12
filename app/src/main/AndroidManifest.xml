@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GoTrackAdmin">
         <activity
+            android:name=".BillingChild"
+            android:exported="false" />
+        <activity
             android:name=".AssignDriverActivity"
             android:exported="false" />
         <activity

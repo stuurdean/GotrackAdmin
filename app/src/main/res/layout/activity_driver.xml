@@ -111,6 +111,18 @@
                 android:text="TextView"
                 android:textSize="16sp" />
 
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drivers License" />
+
+            <ImageView
+                android:id="@+id/license"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@mipmap/landscape" />
+
             <Button
                 android:id="@+id/btnApprove"
                 android:layout_width="match_parent"

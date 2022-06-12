@@ -19,5 +19,15 @@
             android:title="Children"
             android:icon="@drawable/ic_baseline_child_care_24"
             />
+
+        <item android:id="@+id/nav_bill"
+            android:title="Billing"
+            android:icon="@drawable/ic_baseline_payment_24"
+            />
+
+        <item android:id="@+id/nav_Questions"
+            android:title="Questions"
+            android:icon="@drawable/ic_baseline_payment_24"
+            />
     </group>
 </menu>

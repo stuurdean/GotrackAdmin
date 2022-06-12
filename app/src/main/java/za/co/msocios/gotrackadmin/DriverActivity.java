@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.squareup.picasso.Picasso;
 
 import za.co.msocios.gotrackadmin.Common.Common;
 import za.co.msocios.gotrackadmin.Models.Driver;
@@ -23,6 +25,7 @@ public class DriverActivity extends AppCompatActivity {
     TextView txtname,txtsurname,txtphone,txtemail,txtcar,txtcarReg,txtstatus;
     Button approve;
     FirebaseFirestore firestore;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class DriverActivity extends AppCompatActivity {
         txtstatus  = findViewById(R.id.txtStatus);
         approve = findViewById(R.id.btnApprove);
         firestore = FirebaseFirestore.getInstance();
+        imageView = findViewById(R.id.license);
 
 
         txtname.setText("Name: "+Common.selectedDriver.getNames());
@@ -47,6 +51,8 @@ public class DriverActivity extends AppCompatActivity {
         txtcar.setText("Car: "+Common.selectedDriver.getCarName());
         txtcarReg.setText("Registration: "+Common.selectedDriver.getCarReg());
         txtstatus.setText("Status: "+Common.selectedDriver.getStatus());
+
+        Picasso.get().load(Common.selectedDriver.getLicense()).into(imageView);
 
 
         if (Common.selectedDriver.getStatus().equals("Approved"))

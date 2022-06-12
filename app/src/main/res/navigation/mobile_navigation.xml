@@ -38,4 +38,14 @@
         android:name="za.co.msocios.gotrackadmin.ui.children.ChildrenFragment"
         android:label="Chidren"
         tools:layout="@layout/fragment_children" />
+    <fragment
+        android:id="@+id/nav_bill"
+        android:name="za.co.msocios.gotrackadmin.ui.billing.BillingFragment"
+        android:label="fragment_billing"
+        tools:layout="@layout/fragment_billing" />
+    <fragment
+        android:id="@+id/nav_Questions"
+        android:name="za.co.msocios.gotrackadmin.ui.questions.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" />
 </navigation>
