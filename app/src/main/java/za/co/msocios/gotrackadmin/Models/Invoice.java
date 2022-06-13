@@ -36,4 +36,9 @@ public class Invoice {
     public void setInvoiceAmount(String invoiceAmount) {
         InvoiceAmount = invoiceAmount;
     }
+
+
+
+
+
 }

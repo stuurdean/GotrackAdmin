@@ -101,12 +101,12 @@ public class DriversFragment extends Fragment {
 
                 final String uid= getSnapshots().getSnapshot(position).getId();
 
-                Common.selectedDriver = model;
-                Common.selectedDriver.setDriverUID(uid);
+
                 holder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-
+                        Common.selectedDriver = model;
+                        Common.selectedDriver.setDriverUID(uid);
                         startActivity(new Intent(getActivity(), DriverActivity.class));
                     }
                 });

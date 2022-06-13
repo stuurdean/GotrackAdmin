@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Go track Admin</string>
+    <string name="app_name">Track Go Admin</string>
     <string name="invalid_email">Email is not valid</string>
     <string name="invalid_passord">Password is not valid</string>
     <string name="title_activity_dash_boards">DashBoards</string>
